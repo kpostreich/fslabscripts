@@ -50,7 +50,7 @@ echo "---> Restarting pod: $POD"
 oc delete pod $POD -n knative-serving
 
 
-NEWPOD=$(kubectl get pods -n knative-servicing  -o=name | grep activator | sed "s/^.\{4\}//")
+NEWPOD=$(kubectl get pods -n knative-serving  -o=name | grep activator | sed "s/^.\{4\}//")
 
 
 echo "Pod restarted: $NEWPOD"
